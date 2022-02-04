@@ -1,0 +1,46 @@
+{% extends 'layouts/partials/base.html.twig' %}
+
+{% block title pin.title %}
+
+{% block body %}
+
+        <div class="row">
+             <div class="col-md-6 mx-auto">
+                <article class="pin bg-white rounded shadow">
+                        <div class="mw-100 rounded-top overflow-hidden">
+                                {# si on a pin.imageName alors on va prendre l'img en question sinon on utilise l'img / def  #}
+                                <img src="{{ (pin.imageName ? vich_uploader_asset(pin) : asset('build/images/test.jpg')) |
+                                    imagine_filter('squared_thumbnail_medium') }}" class="w-100 rounded-top" alt="{{pin.title}}" />
+                        </div>
+
+                        <div class="p-3">
+                            <h1 class="h5 text-secondary">{{pin.title}} </h1>
+                            <p class="text-muted">
+                                <small>
+                                        Submitted 
+                                        <time datetime="{{pin.createdAt|date('Y-m-d h:i:s')}}">{{pin.createdAt|ago}}</time>
+                                        by {{pin.user.fullName}}
+                                </small> 
+                            </p>             
+                            <p class=" text-break">
+                            <span class="ml-3">{{pin.description}} </span>
+                            </p> 
+                        </div>   
+
+                        <div class="p-3">
+                            <div class="btn-group pl-3">
+                                <a href="{{path('app_pins_edit', {id: pin.id} )}}" class="btn btn-secondary pull-left">Edit </a>
+                                                
+                                {# <a href="{{path('app_pins_delete', {id: pin.id} )}}" >Delete </a> #}
+                                {{ include('pins/delete.html.twig') }} 
+                                            
+                            </div>         
+                        </div>         
+                </article>
+                
+                <div>
+                        
+             </div>
+        </div>
+
+{% endblock %}

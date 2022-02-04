@@ -1,0 +1,14 @@
+{% extends 'layouts/partials/base_error.html.twig' %}
+
+{% block body %}
+
+<div class="container ml-5 pt-5">
+    <h1 class="pt-5"> Page not found </h1>
+
+    <p>
+        The requested page couldn't be located. Checkout for any URL misspelling
+        or <a href="{{ path('app_home') }}"> return to homepage</a>.
+    </p>
+</div>
+    
+{% endblock %}

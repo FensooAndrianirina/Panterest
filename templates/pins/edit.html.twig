@@ -1,0 +1,13 @@
+{% extends 'layouts/partials/base.html.twig' %}
+
+{% block title 'Edit Pin! ' %}
+
+{% block body %}
+     <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1> Edit Pin{{pin.id}} </h1>
+
+            {{ include('pins/_form.html.twig', {'button_label': 'Update'}) }}
+        </div>
+    </div>
+{% endblock %}

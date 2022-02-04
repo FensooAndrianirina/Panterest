@@ -1,0 +1,69 @@
+html,
+body {
+    font-family: 'Montserrat', sans-serif!important;
+}
+
+body {
+    background-color: #f3f1f1!important;
+}
+
+
+/* .pin img {
+        transition: transform 0.3s ease-out
+    &:hover {
+
+        transform: scale(1.075);
+    }
+} */
+
+
+/* .img:hover {
+    transform: scale(1.075)!important;
+} */
+
+.vich-image .form-check {
+    margin-top: 40px!important;
+    /* @extend .mt-3 */
+}
+
+
+/* .vich-image .img {
+    /* @extend .mb-3;
+    @extend .rounded;
+    @extend .shadow;
+    @extend .img-thumbnail; */
+
+
+/* } */
+
+.alert {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #383838!important;
+    border-color: #383838!important;
+}
+
+.alert-success {
+    background: green;
+}
+
+.alert-error {
+    background: #cd0000;
+}
+
+.alert-info {
+    background: blue;
+}
+
+.test {
+    color: #02021d;
+    font-weight: bold;
+}
