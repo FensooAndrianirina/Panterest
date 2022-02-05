@@ -1,5 +1,7 @@
 {% extends 'layouts/partials/base_error.html.twig' %}
 
+{% block title 'Page not found' %}
+
 {% block body %}
 
 <div class="container ml-5 pt-5">
@@ -7,7 +9,7 @@
 
     <p>
         The requested page couldn't be located. Checkout for any URL misspelling
-        or <a href="{{ path('app_home') }}"> return to homepage</a>.
+        or <a href="{{ path('app_home') }}" class="text-decoration-none"> return to homepage</a>.
     </p>
 </div>
     

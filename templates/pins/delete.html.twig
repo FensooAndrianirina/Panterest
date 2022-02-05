@@ -1,4 +1,4 @@
-<form method="post" action="{{ path('app_pins_delete', {'id': pin.id}) }}" onclick="confirm('Are you sure you want to delete this pin?');">
-    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ pin.id) }}">
-    <button class="btn btn-warning">Delete</button>
+<form method="post" action="{{ path('app_pins_delete', {id: pin.id}) }}" onclick="confirm('Are you sure you?');">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token('pin_deletion' ~ pin.id) }}">
+    <button class="btn btn-danger">Delete</button>
 </form>

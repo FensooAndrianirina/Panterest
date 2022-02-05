@@ -1,14 +1,14 @@
 
-<nav class="navbar navbar-expand-sm navbar-light bg-light mb-4 pl-sm-4">
+<nav class="navbar navbar-expand-sm navbar-light bg-light mb-4 pl-sm-4" id="thenav">
     <div class="container">
-        <a class="navbar-brand" href="{{path('app_home')}}">Panterest</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand " href="{{path('app_home')}}"><span class="pant">Panterest</span></a>
+        <button class="navbar-toggler" id="bouton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto" id="lien">
                 {% if app.user %}
                     <li class="nav-item ">
                         <a class="nav-link" href="{{path('app_pins_create')}}">New Pin</a>
@@ -17,8 +17,15 @@
                         <a class="nav-link" href="{{path('app_register')}}">Account</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{path('app_logout')}}">Logout</a>
+                        <a class="nav-link " href="#" onclick="event.preventDefault(); 
+                        document.getElementById('js-logout-form').submit();">
+                            Logout
+                        </a>
                     </li>  
+
+                    <form id="js-logout-form" action="{{path('app_logout')}}" method="POST" style="display:none;" >
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('logout') }}">
+                    </form>
                 {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{path('app_register')}}">Register</a>
