@@ -11,18 +11,18 @@
              class="shadow rounded-circle">  #}
 
         <img src="{{ asset('/uploads/pins/woman.png')}}" alt=" 's Avatar " 
-             width="150" class="shadow rounded-circle"> 
+             width="140" class="shadow rounded-circle"> 
 
-        <p class="mt-5 lead"> {{app.user.email}} </p> <hr>
+        <p class="mt-4 lead"> {{app.user.email}} </p> <hr>
 
         <h2> {{app.user.fullName}} </h2>
 
         <p><small> Account created on {{app.user.createdAt|date('d/m/Y ')}} <p></small>
 
         <p class="text-decoration-none">
-            <a href="{{path('app_account_edit')}}" class="btn btn-secondary"> Edit account </a>  <a href="" class="btn btn-secondary"> Change password </a>
+          <a href="{{path('app_account_edit')}}" class="btn btn-secondary"> Edit account </a> 
+          <a href="{{path('app_account_change_password')}}" class="btn btn-secondary"> Change password </a>
         </p>
-
    </div>
 </div>
 {% endblock %}
