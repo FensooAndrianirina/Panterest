@@ -223,6 +223,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->getFirstName() . ' ' . $this->getLastName();
     }
 
+    // public function gravatar(?int $size = 160)
+    // {
+    //     return 'https://gravatar.com/avatar/'. md5(strtolower(trim($this->getEmail()))) .'/?s=' .$size;
+    // }
+
     public function isVerified(): bool
     {
         return $this->isVerified;

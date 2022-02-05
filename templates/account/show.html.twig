@@ -1,0 +1,26 @@
+{% extends 'layouts/partials/base.html.twig' %}
+
+{% block title 'Profil' %}
+
+{% block body %}
+<div class="row">
+   <div class="col-md-6 mx-auto text-center">
+        <h1 class="my-5">Profile</h1>
+
+        {# <img src="{{ app.user.gravatar}}" alt="{{app.user.fullName}}'s Avatar " 
+             class="shadow rounded-circle">  #}
+
+        <img src="{{ asset('/uploads/pins/woman.png')}}" alt="{{app.user.fullName}}'s Avatar " 
+             width="160" class="shadow rounded-circle"> 
+
+        <p class="mt-5 lead"> {{app.user.email}} </p> 
+
+        <h2> {{app.user.fullName}} </h2>
+
+        <p >
+            <a href=""> Edit account </a> | <a href=""> Change password </a>
+        </p>
+
+   </div>
+</div>
+{% endblock %}
