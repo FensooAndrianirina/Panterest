@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4 pl-sm-4" id="thenav">
-    <div class="container">
+    <div class="container"> 
         <a class="navbar-brand " href="{{path('app_home')}}"><span class="pant">Panterest</span></a>
         <button class="navbar-toggler" id="bouton" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,7 +8,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto" id="lien">
+            <ul class="navbar-nav ml-auto liste" id="lien">
                 {% if app.user %}
                     <li class="nav-item ">
                         <a class="nav-link" href="{{path('app_pins_create')}}">New Pin</a>
@@ -27,14 +27,15 @@
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('logout') }}">
                     </form>
                 {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{path('app_register')}}">Register</a>
+                    <li class="nav-item ">
+                        <a class="nav-link"  href="{{path('app_register')}}">Register</a>
                     </li> 
-                    <li class="nav-item">
+                    <li class="nav-item" >
                         <a class="nav-link" href="{{path('app_login')}} ">Login</a>
                     </li>
                 {% endif %}
             </ul>
         </div>
-    </div> 
+    </div>  
 </nav>
+

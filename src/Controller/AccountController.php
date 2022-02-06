@@ -75,7 +75,7 @@ class AccountController extends AbstractController
 
             $this->addFlash('success', 'Password updated successfully!');
 
-            return $this->redirectToRoute('app_account'); 
+            return $this->redirectToRoute('app_account');
         } 
 
         return $this->render('account/change_password.html.twig', [

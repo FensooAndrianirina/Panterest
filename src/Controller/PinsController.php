@@ -71,7 +71,8 @@ class PinsController extends AbstractController
         // $form = $this->createForm(PinType::class, $pin, [
         //     'method' => 'PUT'
         // ]);
-        $form = $this->createForm(PinType::class, $pin);
+
+        $form = $this->createForm(PinType::class, $pin); 
 
         $form->handleRequest($request);
 

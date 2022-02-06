@@ -5,15 +5,15 @@
 {% block body %}
 <div class="row">
    <div class="col-md-6 mx-auto text-center">
-        <h1 class="my-5">Profile</h1>
+        <h1 class="my-3">Profile</h1>
 
-        {# <img src="{{ app.user.gravatar}}" alt="{{app.user.fullName}}'s Avatar " 
+        {# <img src="{{ app.user.gravatarUrl()}}" alt="{{app.user.fullName}}'s Avatar " 
              class="shadow rounded-circle">  #}
 
-        <img src="{{ asset('/uploads/pins/woman.png')}}" alt=" 's Avatar " 
-             width="140" class="shadow rounded-circle"> 
+        <img src="{{ asset('/uploads/pins/woman.png')}}" alt=" {{app.user.fullName}}'s Avatar " 
+             width="120" class="shadow rounded-circle"> 
 
-        <p class="mt-4 lead"> {{app.user.email}} </p> <hr>
+        <p class="mt-3 lead"> {{app.user.email}} </p> <hr>
 
         <h2> {{app.user.fullName}} </h2>
 

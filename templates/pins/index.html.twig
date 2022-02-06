@@ -30,12 +30,12 @@
                                     <p>
                                 </p>
                                 
-                                <a href="{{ path('app_pins_delete', {id: pin.id}) }}" class="btn btn-danger text-decoration-none" onclick="event.preventDefault(); confirm('Are you sure you?') && document.getElementById('js-pin-delete-form-{{ pin.id  }}').submit();"> 
+                                {# <a href="{{ path('app_pins_delete', {id: pin.id}) }}" class="btn btn-danger text-decoration-none" onclick="event.preventDefault(); confirm('Are you sure you?') && document.getElementById('js-pin-delete-form-{{ pin.id  }}').submit();"> 
                                     Delete 
                                 </a>
                                 <form id="js-pin-delete-form-{{ pin.id }}" method="post" action="{{ path('app_pins_delete', {id: pin.id}) }}">
                                     <input type="hidden" name="csrf_token" value="{{ csrf_token('pin_deletion' ~ pin.id) }}">
-                                </form>
+                                </form> #}
                             </div>
                         </article>
                     </div>
