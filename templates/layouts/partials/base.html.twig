@@ -3,19 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link href="{{ asset('/build/asset/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('/build/asset/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('build/assets/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('build/assets/bootstrap.min.css') }}" rel="stylesheet">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `compo  ser require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {# {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %} #}
-
-        <script src="{{ asset('/build/asset/bootstrap.bundle.min.js') }}" crossorigin="anonymous" defer ></script>
-        <script src="{{ asset('/build/asset/bootstrap.min.js') }}" crossorigin="anonymous" defer ></script>
-        <script src="{{ asset('/build/asset/app.js') }}" crossorigin="anonymous" defer ></script>
-        <script src="{{ asset('/build/asset/jquery-2.2.3.min.js') }}" crossorigin="anonymous" ></script>
-
+        
         {% block javascripts %}      
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
@@ -32,5 +23,8 @@
  
         {{ include('layouts/partials/_footer.html.twig') }} 
       
+        <script src="{{ asset('/build/assets/bootstrap.bundle.min.js') }}" crossorigin="anonymous" defer ></script>
+        <script src="{{ asset('/build/assets/app.js') }}" crossorigin="anonymous" defer ></script>
+        <script src="{{ asset('/build/assets/jquery-2.2.3.min.js') }}" crossorigin="anonymous" ></script>
     </body>
 </html>
