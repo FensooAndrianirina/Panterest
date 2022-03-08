@@ -5,24 +5,27 @@
 {% block body %}
 <div class="row">
    <div class="col-md-6 mx-auto text-center">
-        <h1 class="my-3">Profile</h1>
+          <h1 class="my-3">Profile</h1>
 
-        {# <img src="{{ app.user.gravatarUrl()}}" alt="{{app.user.fullName}}'s Avatar " 
-             class="shadow rounded-circle">  #}
+          {% if app.user.gender == "Homme" %}
+               <img src="{{ asset('/uploads/pins/man.png')}}" alt=" {{app.user.fullName}}'s Avatar " 
+                    width="120" class="shadow rounded-circle"> 
+          {% else %}
+               <img src="{{ asset('/uploads/pins/woman.png')}}" alt=" {{app.user.fullName}}'s Avatar " 
+                    width="120" class="shadow rounded-circle"> 
+          {% endif %}
+          
 
-        <img src="{{ asset('/uploads/pins/woman.png')}}" alt=" {{app.user.fullName}}'s Avatar " 
-             width="120" class="shadow rounded-circle"> 
+          <p class="mt-3 lead"> {{app.user.email}} </p> <hr>
 
-        <p class="mt-3 lead"> {{app.user.email}} </p> <hr>
+          <h2> {{app.user.fullName}} </h2>
 
-        <h2> {{app.user.fullName}} </h2>
+          <p><small> Account created on {{app.user.createdAt|date('d/m/Y ')}} <p></small>
 
-        <p><small> Account created on {{app.user.createdAt|date('d/m/Y ')}} <p></small>
-
-        <p class="text-decoration-none">
-          <a href="{{path('app_account_edit')}}" class="btn btn-secondary"> Edit account </a> 
-          <a href="{{path('app_account_change_password')}}" class="btn btn-secondary"> Change password </a>
-        </p>
+          <p class="text-decoration-none">
+               <a href="{{path('app_account_edit')}}" class="btn btn-secondary"> Edit account </a> 
+               <a href="{{path('app_account_change_password')}}" class="btn btn-secondary"> Change password </a>
+          </p>
    </div>
 </div>
 {% endblock %}
